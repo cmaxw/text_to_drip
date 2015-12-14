@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 group :development do
+  gem "rails_layout", "~> 1.0.29"
   gem "web-console", "~> 2.2.1"
   gem "spring", "~> 1.5.0"
 end

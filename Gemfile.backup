@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 group :development do
+  gem "rails_layout", "~> 1.0.29"
   gem "web-console", "~> 2.2.1"
   gem "spring", "~> 1.5.0"
 end
@@ -23,4 +24,4 @@ gem "drip-ruby", "~> 0.0.5", {:require=>"drip"}
 gem "sidekiq", "~> 3.3.3"
 gem "factory_girl_rails", "~> 4.5.0", {:group=>[:development, :test]}
 gem "simple_form", "~> 3.2.0"
-gem "bootstrap-sass"
+gem "bootstrap-sass", "~> 3.3.5.1"
