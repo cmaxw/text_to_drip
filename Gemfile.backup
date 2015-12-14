@@ -23,4 +23,4 @@ gem "drip-ruby", "~> 0.0.5", {:require=>"drip"}
 gem "sidekiq", "~> 3.3.3"
 gem "factory_girl_rails", "~> 4.5.0", {:group=>[:development, :test]}
 gem "simple_form", "~> 3.2.0"
-gem "bootstrap-sass", "~> 3.3.5.1"
+gem "bootstrap-sass"
