@@ -1,5 +1,5 @@
 class SmsController < ApplicationController
   def process
-    raise params
+    Rails.logger.info params.inspect
   end
 end
