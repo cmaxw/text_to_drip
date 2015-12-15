@@ -63,7 +63,7 @@ namespace :deploy do
     on roles(:db) do
       # Your restart mechanism here, for example:
       within release_path do
-        run 'bundle exec rake db:seed RAILS_ENV=production'
+        execute :rake, 'db:seed RAILS_ENV=production'
       end
     end
   end
