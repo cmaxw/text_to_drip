@@ -25,3 +25,4 @@ gem "sidekiq", "~> 3.3.3"
 gem "factory_girl_rails", "~> 4.5.0", {:group=>[:development, :test]}
 gem "simple_form", "~> 3.2.0"
 gem "bootstrap-sass", "~> 3.3.5.1"
+gem "capistrano-rails", "~> 1.1.5"
