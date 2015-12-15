@@ -81,6 +81,7 @@ GEM
       actionmailer (>= 3.2.6, < 5)
       devise (>= 3.2.0)
     diff-lcs (1.2.5)
+    dotenv (2.0.2)
     drip-ruby (0.0.5)
       faraday (~> 0.9)
       faraday_middleware (~> 0.9)
@@ -241,6 +242,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise (~> 3.5.2)
   devise_invitable (~> 1.5.3)
+  dotenv
   drip-ruby (~> 0.0.5)
   factory_girl_rails (~> 4.5.0)
   jbuilder (~> 2.3.2)
