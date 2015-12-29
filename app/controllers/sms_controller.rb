@@ -1,5 +1,5 @@
 class SmsController < ApplicationController
   def process
-    Rails.logger.info params.inspect
+    SmsWorker.perform_async(params["From"], params["Body"])
   end
 end

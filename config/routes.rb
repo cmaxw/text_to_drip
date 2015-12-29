@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :keywords
   # SMS Endpoint
   post 'sms', to: 'sms#process'
 

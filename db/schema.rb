@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151214224816) do
+ActiveRecord::Schema.define(version: 20151229001021) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,4 +34,24 @@ ActiveRecord::Schema.define(version: 20151214224816) do
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
 
+  create_table "keywords", force: :cascade do |t|
+    t.string   "keyword"
+    t.string   "list_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "tag"
+    t.string   "campaign"
+  end
+
+  create_table "pending_requests", force: :cascade do |t|
+    t.integer  "keyword_id"
+    t.string   "phone_number"
+    t.boolean  "handled"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "pending_requests", ["keyword_id"], name: "index_pending_requests_on_keyword_id", using: :btree
+
+  add_foreign_key "pending_requests", "keywords"
 end
