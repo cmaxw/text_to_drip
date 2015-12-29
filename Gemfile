@@ -27,3 +27,4 @@ gem "simple_form", "~> 3.2.0"
 gem "bootstrap-sass", "~> 3.3.5.1"
 gem "capistrano-rails", "~> 1.1.5"
 gem "dotenv-rails", "~> 2.0.2"
+gem "capistrano-sidekiq", "~> 0.5.3", {:group=>:development}
