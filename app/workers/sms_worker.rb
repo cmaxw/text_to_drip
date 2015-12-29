@@ -2,7 +2,7 @@ class SmsWorker
   include Sidekiq::Worker
 
   def perform(phone_number, message)
-    keyword = Keyword.where(keyword: message.upcase)
+    keyword = Keyword.where(keyword: message.upcase).first
 
     if keyword
       PendingRequest.create(keyword: keyword, phone_number: phone_number)
