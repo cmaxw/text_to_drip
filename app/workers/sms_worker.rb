@@ -7,7 +7,7 @@ class SmsWorker
     if keyword
       PendingRequest.create(keyword: keyword, phone_number: phone_number)
       TWILIO_CLIENT.messages.create(
-                                    from: TWILIO_PHONE_NUMBER,
+                                    from: ENV["TWILIO_PHONE_NUMBER"],
                                     to: phone_number,
                                     body: "Reply with your email address to get #{keyword.list_name}"
                                     )
