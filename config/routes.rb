@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-
-  resources :keywords
   # SMS Endpoint
-  post 'sms', to: 'sms#process'
+  post 'sms', to: 'sms#process_sms'
 
   # Keyword Management
+  resources :keywords
 
   # Phone Number Management
 
